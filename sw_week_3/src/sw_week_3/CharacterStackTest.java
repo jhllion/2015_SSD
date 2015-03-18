@@ -6,8 +6,10 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-public class CharacterStackTest  {
+import defect.CharacterStack;
 
+public class CharacterStackTest  {
+	int MAX_SIZE = 20;
 	@Before
 	public void setUp() throws Exception {
 	}
@@ -22,10 +24,11 @@ public class CharacterStackTest  {
 	}
 	
 	
-	@Test
+	@Test 
 	public void testCharacterStack(){
-			
-		
+		CharacterStack character_stack = new CharacterStack();
+		assertTrue(character_stack.getSize() ==0);
+		assertEquals(MAX_SIZE , character_stack.getMaxSize());	
 	}
 
 }
